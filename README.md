@@ -88,16 +88,6 @@ curl -s http://localhost:8000/health
 curl -X POST http://localhost:8000/predict -H "Content-Type: application/json" -d '{"features": [12,2,2,18,95,2,2.5,0.3,1.2,5,1,2.8,500]}'
 ```
 
-## Links (open in browser)
-
-| Service | URL |
-|--------|-----|
-| MLflow UI | http://127.0.0.1:5001 |
-| API docs (Swagger) | http://127.0.0.1:8000/docs |
-| Prometheus | http://127.0.0.1:9090 |
-
-See [API.md](API.md) for full API reference.
-
 ## Model Training & Experiment Tracking
 
 * The training pipeline ingests data and trains a machine learning model
