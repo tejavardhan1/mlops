@@ -125,6 +125,4 @@ This helps understand how the model behaves after deployment.
 
 **Teja Vardhan Reddy**
 
----
-
-⭐ This project was built for learning MLOps concepts and gaining hands-on experience.
+This project was built for learning MLOps concepts and gaining hands-on experience.
