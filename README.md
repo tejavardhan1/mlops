@@ -2,6 +2,14 @@
 
 Mini MLOps platform: data ingestion → training → MLflow tracking → Dockerized inference → Prometheus monitoring.
 
+This project uses [GitHub Actions](.github/workflows/ci.yml) for CI: every push to `main` installs dependencies and runs ingest + config validation.
+
+## Architecture
+
+![Architecture](architecture.png)
+
+Data flows: **Data Source** → **Data Ingestion** → **Model Training** → **MLflow Tracking** → **Inference API (Docker)** → **Prometheus Monitoring**.
+
 ## Prerequisites
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) (Mac/Windows/Linux)
@@ -44,3 +52,7 @@ curl -X POST http://127.0.0.1:8000/predict -H "Content-Type: application/json" -
 | Prometheus | http://127.0.0.1:9090 |
 
 See [API.md](API.md) for full API reference.
+
+## Cloud deployment
+
+The project can be deployed on cloud platforms like AWS EC2 using Docker: launch an Ubuntu instance, install Docker and Docker Compose, clone the repo, and run `docker compose up --build`. Access the API at `http://<EC2-PUBLIC-IP>:8000`.
